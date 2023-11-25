@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="left-section"> 
+        <div class="logo-section">Sign-up Form</div>  
+        <div class="footer">By Volky</div>  
+    </div>
+    <div class="right-section"> 
+        <div class="content">
+            <div class="text">
+                This is not a real online service! You know you need something
+                like this in your life to help you realize your deepest dreams.
+                Sign up now to get started
+            </div>
+        </div>
+        <div class="form-section">
+            <h1>Let's do this!</h1>
+            <form action="javascript:validate()">
+                <section>
+                    <label for="name" >FIRST NAME<input type="text" id="name"></label>
+                    <label for="lastName" >LAST NAME<input type="text" id="lastName"></label>
+                </section>
+                <section>
+                    <label for="email">EMAIL<input type="email" id="email"></label>
+                    <label for="phoneNumber">PHONE NUMBER<input type="tel" id="phoneNumber"></label>
+                </section>
+                <section>
+                    <label for="password">PASSWORD<input type="password" id="password"></label>
+                    <label for="confirmPassword">CONFIRM PASSWORD<input type="password" id="confirmPassword"></label>
+                </section>
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        password = document.querySelector('#password');
+        confirmPassword = document.querySelector('#confirmPassword');
+      
+        function validate(){
+            if(password.value == confirmPassword.value){
+                alert('validation passed');
+            } else{
+                alert('password don\'t correspond');
+            }
+        }
+    </script>
+</body>
+</html>
